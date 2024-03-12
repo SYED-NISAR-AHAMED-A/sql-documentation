@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="doc.css">
+  <meta name="viewport" width="device-width" />
+<body>
+  <nav id="navbar">
+    <header>SQL DOCUMENTATION</header>
+  <ul>
+    <li><a href="#sql" class="nav-link">SQL</a></lil1>
+    <li><a href="#ddl" class="nav-link">DDL</a></li>
+    <li><a href="#dml" class="nav-link">DML</a></li>
+    <li><a href="#dql" class="nav-link">DQL</a></li>
+    <li><a href="#dcl" class="nav-link">DCL</a></li>
+  </ul>
+    
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="sql">
+      <header><b>SQL</b></header>
+    <ol>
+      <li><p>
+        SQL, or Structured Query Language, is a domain-specific programming language used for managing and manipulating relational databases.</p></li>
+      <li><p> It is commonly used in conjunction with relational database management systems (RDBMS) such as MySQL, PostgreSQL, Microsoft SQL Server, SQLite, and Oracle Database.</p></li>
+    </ol>
+    </section>
+    <section class="main-section" id="ddl">
+      <header><b>DDL</b></header>
+      <p>DDL (Data Definition Language):
+
+        <ol>
+          <li>CREATE: Used to create database objects like tables, views, indexes, etc.</li>
+        <code>CREATE TABLE employees (
+            employee_id INT PRIMARY KEY,
+            first_name VARCHAR(50),
+            last_name VARCHAR(50),
+            salary DECIMAL(10, 2)
+        );
+        </code>
+
+        <li><p>ALTER: Modifies the structure of existing database objects (e.g., adding a column to a table).</p></li>
+        <code>ALTER TABLE employees
+            ADD COLUMN email VARCHAR(100);
+            </code>
+        <li>DROP: Deletes database objects (e.g., tables, views, indexes).</li>
+        <code>
+            DROP TABLE employees;
+        </code>
+        <li>TRUNCATE: Removes all records from a table, but retains the table structure for future use.<li>    
+      </ol>
+
+
+
+    </section>
+    <section class="main-section" id="dml">
+      <header><b>DML</b></header>
+      <p>DML (Data Manipulation Language):
+
+        <ol>
+        <li>INSERT: Adds new records to a table.</li>
+        <code>INSERT INTO employees (employee_id, first_name, last_name, salary)
+            VALUES (1, 'John', 'Doe', 50000);
+            </code>
+        <li>UPDATE: Modifies existing records in a table.</li>
+        <code>UPDATE employees
+            SET salary = 55000
+            WHERE employee_id = 1;
+            </code>
+       <li> DELETE: Removes records from a table.</p></li>
+      
+      <code>DELETE FROM employees
+        WHERE employee_id = 1;
+        </code>
+      </ol>
+
+
+
+    </section>
+    <section class="main-section" id="dql">
+      <header><b>DQL</b></header>
+      <p>DQL (Data Query Language):
+      <ol>
+        SELECT: Primarily used for querying the database to retrieve specific information.
+        Focuses on retrieving and presenting data without modifying the database structure.</p>
+      
+      <code>SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition;
+        </code>
+      </ol>
+
+
+    </section>
+    <section class="main-section" id="dcl">
+      <header><b>DCL</b></header>
+      <ol>
+      <p>DCL (Data Control Language):
+
+        GRANT: Provides specific privileges to users or roles.
+        <code>GRANT SELECT, INSERT ON employees TO username;
+        </code>
+        REVOKE: Removes specific privileges from users or roles.
+        Manages access to the database by controlling who can perform specific operations.</p>
+        <code>GRANT SELECT, INSERT ON employees TO username;
+        </code>
+      </ol>
+
+
+
+    </section>
+    <footer>
+      <p>Documentation brought to you on fly by SYED</p>
+    </footer>
+    
+  </main>
+</body>
+</html>
